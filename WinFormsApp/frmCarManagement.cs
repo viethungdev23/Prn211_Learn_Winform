@@ -89,5 +89,10 @@ namespace WinFormsApp
             };
             return car;
         }
+
+        private void dgvListCar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnUpdate_Click(sender, e);
+        }
     }
 }

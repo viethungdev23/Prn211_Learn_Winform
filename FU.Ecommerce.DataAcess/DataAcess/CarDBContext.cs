@@ -66,7 +66,7 @@ public sealed class CarDBContext
         if (car is not null)
         {
             var index = CarList.IndexOf(car);
-            CarList[index] = car;
+            CarList[index] = c;
         }
         else
         {

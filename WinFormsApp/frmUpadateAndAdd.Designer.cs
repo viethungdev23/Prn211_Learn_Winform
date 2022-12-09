@@ -96,6 +96,7 @@
             // 
             // txtCarId
             // 
+            this.txtCarId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCarId.Location = new System.Drawing.Point(211, 80);
             this.txtCarId.Name = "txtCarId";
             this.txtCarId.Size = new System.Drawing.Size(303, 23);

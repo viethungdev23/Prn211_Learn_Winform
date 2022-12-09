@@ -54,6 +54,7 @@
             this.dgvListCar.Size = new System.Drawing.Size(979, 306);
             this.dgvListCar.TabIndex = 0;
             this.dgvListCar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCar_CellClick);
+            this.dgvListCar.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCar_CellDoubleClick);
             // 
             // groupBox1
             // 

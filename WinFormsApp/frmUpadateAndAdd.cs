@@ -25,10 +25,16 @@ namespace WinFormsApp
         private void frmUpadateAndAdd_Load(object sender, EventArgs e)
         {
             this.Text = Title;
-            this.txtCarId.Enabled= false;
+            this.txtCarId.Enabled= !UpdateOrAdd;
             if (UpdateOrAdd)
             {
-
+                txtCarId.Text = CarInfo.CarId.ToString();
+                txtName.Text = CarInfo.CarName;
+                cboManufacture.Items.Add(CarInfo.Manufacture);
+                cboManufacture.SelectedIndex= 0;    
+                cboManufacture.Enabled= !UpdateOrAdd;
+                this.mskTxtPrice.Text = CarInfo.ListPrice.ToString();
+                dtDateRelease.Value = CarInfo.ReleaseDate;
             }
             else
             {
@@ -67,10 +73,11 @@ namespace WinFormsApp
                 }
                 else
                 {
-                    CarRepository.Add(car);
-                    this.DialogResult= DialogResult.OK;
+                    CarRepository.Add(car); 
                 }
-            }catch(Exception ex)
+                this.DialogResult = DialogResult.OK;
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
