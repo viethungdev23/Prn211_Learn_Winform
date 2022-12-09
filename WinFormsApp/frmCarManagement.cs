@@ -1,3 +1,4 @@
+using FU.Ecommerce.DataAcess.DataAcess;
 using FU.Ecommerce.DataAcess.Repository;
 using FU.Ecommerce.Entities;
 
@@ -93,6 +94,17 @@ namespace WinFormsApp
         private void dgvListCar_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btnUpdate_Click(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            // lay data tu cai row minh muon xoa
+            var row = dgvListCar.CurrentRow;
+            var car = GetCarFromDataGridView(row);
+            MessageBox.Show($"Do u want delete {car.CarName}");
+            _carRepository.Delete(car);
+            LoadCarList();
+
         }
     }
 }

@@ -7,7 +7,7 @@ namespace WinFormsApp
     {
         public ICarRepository CarRepository { get; set; }
         public string Title { get; set; }
-        public bool UpdateOrAdd { get; set; }
+        public bool UpdateOrAdd { get; set; } 
         public Car CarInfo { get; set; }
 
         public frmUpadateAndAdd()
@@ -38,7 +38,7 @@ namespace WinFormsApp
             }
             else
             {
-
+                dtDateRelease.Value = DateTime.Now;
             }
             
             // add data (danh sach cac manufacture to cboManufacture
@@ -52,7 +52,7 @@ namespace WinFormsApp
             //1. validate toan bo thong tin tren form
             if(this.txtCarId.Text == string.Empty || this.txtName.Text == string.Empty)
             {
-                MessageBox.Show("carId khong dc null...");
+                MessageBox.Show(" khong dc null...");
                 this.txtCarId.Focus();
             }
             //2. collect date tu form => object
