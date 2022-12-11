@@ -13,4 +13,10 @@
     <ProjectReference Include="..\FU.Ecommerce.Entities\FU.Ecommerce.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
